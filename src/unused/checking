@@ -1,0 +1,17 @@
+// import React, from 'react';
+
+// // class Checking extends index {
+// //     constructor(props){
+// //       super(props)
+// //       this.state = {
+// //         balance: 0
+// //       }
+// //     }
+// //   }
+// const Checking = (props) => {
+//     return (
+//         <div className="checking"
+//     )
+// }
+
+// export default Checking;
