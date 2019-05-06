@@ -7,7 +7,7 @@ class Account extends Component {
     	this.state = {
       	balance: 0
     	}
-    // this.handleSubmit = this.handleSubmit.bind(this);
+  
     }
     handleDepositClick = (e) => {
 		e.preventDefault();
@@ -32,11 +32,13 @@ class Account extends Component {
 			balanceClass += ' zero';
 		}
 		return (
-        
-
-			<div className="account">
-				<h2>{this.props.name}</h2> 
-			<div className={balanceClass}>{this.state.balance}</div>
+        	<div className="account">
+				<h2>
+					{this.props.name}
+				</h2> 
+			<div className={balanceClass}>
+				{this.state.balance}
+			</div>
 			
 			<input type="text" placeholder="enter an amount" ref={(input) => this.inputBox = input}/>
 			<input type="button" value="Deposit" onClick={this.handleDepositClick}/>
