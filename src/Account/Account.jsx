@@ -16,15 +16,21 @@ class Account extends Component {
 		this.setState({
 			balance: this.state.balance + amount
 		})
+		this.inputBox.value = 0
     }
-    handleWithdrawClick = (e) => {
+		
+		
+		handleWithdrawClick = (e) => {
 		e.preventDefault();
 		const amount = parseInt(this.inputBox.value);
 		console.log(amount);
-		this.setState({
-			balance: this.state.balance - amount
-		})
-    }
+		const newBalance = this.state.balance - amount;
+		if(newBalance >= 0){
+			this.setState({
+				balance: this.state.balance - amount})
+		}else(this.inputBox.value === 'insufficient funds');
+		this.inputBox.value = 0
+		}
       
   render(){
 		let balanceClass = 'balance';
