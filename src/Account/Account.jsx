@@ -17,6 +17,14 @@ class Account extends Component {
         balance: this.state.balance + amount
       })
     }
+    handleWithdrawClick = (e) => {
+      e.preventDefault();
+      const amount = parseInt(this.inputBox.value);
+      console.log(amount);
+      this.setState({
+        blance: this.state.balance - amount
+      })
+    }
       
   render(){
       let balanceClass = 'balance';
